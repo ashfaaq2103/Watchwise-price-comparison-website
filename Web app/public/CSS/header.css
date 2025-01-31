@@ -1,0 +1,86 @@
+/* sets header position fixed so that it moves when scrolled, sets it to top of page, adds a border to bottom of header and displays it on top of everything */
+header
+{
+    position: fixed;
+    width: auto;
+    left: 0;
+    right: 0;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #b1b1b1;
+    background-color: rgb(255, 255, 254);
+    z-index: 2;
+}
+
+/* display content on same line and display content in center of y axis of nav bar */
+header nav 
+{
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 0 25px; 
+}
+
+/* styles image in the nav bar */
+.header_img 
+{
+    height: auto;
+    width: 250px;
+    margin-left: 57%;
+
+}
+
+/* Sets font attributes and colors */
+.input_text
+{
+    padding: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    border-color: #545540;
+    background-color: white;
+    transition: 0.7s;
+}
+
+/* sets color when hovered  */
+.input_text:hover
+{
+    background-color: aliceblue;
+}
+
+/* positions button, removes border and background */
+.input_btn
+{
+    float: left;
+    width: 20%;
+    background: none;
+    cursor: pointer;
+    border: none;
+}
+
+/* sets font attributes of all a tag in header */
+header a
+{
+    padding: 20px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #545540; 
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+/* changes size and color when hovered  */
+header a:hover 
+{
+    font-size: 17px;
+    color: black;
+}
+
+/* sets position of element and sets everything on same line */
+.right_side
+{
+    position: fixed;
+    margin-left: 80%;
+    white-space: nowrap;
+}

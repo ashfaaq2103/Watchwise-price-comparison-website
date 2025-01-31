@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Specifies the title of the page -->
+    <title>Home page</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- External script dependencies -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.5.0/dist/sweetalert2.min.js"></script>
+
+    <!-- External CSS styles -->
+    <link rel="stylesheet" type="text/css" href="./CSS/header.css" />
+    <link rel="stylesheet" type="text/css" href="./CSS/footer.css" />
+    <link rel="stylesheet" type="text/css" href="./CSS/style.css" />
+
+    <!-- External common.js script -->
+    <script src="./js/common.js"></script>
+</head>
+
+<!-- Header section -->
+<header id="top-header">
+    <nav>
+        <!-- Search box with search icon as a button -->
+        <input class="input_text" type="text" placeholder="Search..." id="search_btn" name="search">
+        <button class="input_btn" type="submit" onclick="clicked()">
+            <i>
+                <img src="./Assets/search.png" alt="search">
+            </i>
+        </button>
+
+        <!-- Home link -->
+        <a href="./index.html">HOME</a>
+
+        <!-- Logo in the middle of the page -->
+        <!-- Text and image serving as a button to go to the cart page -->
+        <img class="header_img" src="./Assets/logo.png" alt="logo-header">
+        <div class="right_side">
+            <a href="./products.html">VIEW ALL WATCHES</a>
+        </div>
+    </nav>
+</header>
+
+<body>
+<!-- Main content container -->
+<div class="container1">
+    <div class="container1css">
+        <!-- Background image -->
+        <img src="./Assets/watch_background.png" class="watch_image">
+
+        <!-- Container with welcome text and search input -->
+        <div class="container1search">
+            <p class="about">
+                Welcome to WATCHWISE!<br><br>
+                WATCHWISE scores you the lowest price when you shop.
+                We are an independent informational service offering
+                real price comparisons. No store can influence any information
+                you find on our site. So, stop losing your precious time, we will
+                watch the price for you!
+            </p>
+            <div class="wrap">
+                <div class="search">
+                    <!-- Search input and button -->
+                    <input type="text" class="searchTerm" placeholder="What are you looking for today?" id="search_btn1">
+                    <button type="submit" class="searchButton" onclick="clicked1()">
+                        <i>
+                            <img src="./Assets/search.png" alt="search">
+                        </i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Line breaks for spacing -->
+<br><br><br><br><br><br><br><br>
+</body>
+
+<!-- Footer section -->
+<footer>
+    <!-- Logo which, when pressed, opens a new page with a link URL -->
+    <div class="copyright" id="socials">
+        <ul>
+            <div class="social_logo">
+                <h3 class="middle_text">Follow us</h3>
+                <div class="socials">
+                    <!-- Social media icons and links -->
+                    <li><a href="https://www.facebook.com" target="_blank"><img src="./Assets/facebook.png"></a> </li>
+                    <li><a href="https://twitter.com" target="_blank"><img src="./Assets/twitter.png"></a> </li>
+                    <li><a href="https://www.instagram.com" target="_blank"><img src="./Assets/instagram.png"></a> </li>
+                </div>
+            </div>
+        </ul>
+        <!-- Copyright information -->
+        <p class="paragraph">WATCHWISE Copyright 2023© All rights reserved</p>
+    </div>
+</footer>
+
+</html>

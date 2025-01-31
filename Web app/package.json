@@ -1,0 +1,14 @@
+{
+  "name": "M00826931 Coursework 1 Java",
+  "version": "1.0.0",
+  "dependencies": {
+    "chai": "^4.3.4",
+    "chai-http": "^4.4.0",
+    "express": "^4.18.2",
+    "mvn": "^3.5.0",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "mocha": "^10.2.0"
+  }
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="org.example.ComparisonXML" table="comparison">
+        <id name="id" type="int">
+            <column name="comp_id"/>
+            <generator class="increment"/>
+        </id>
+        <property name="foreign_id" type="int">
+            <column name="watch_id"/>
+        </property>
+        <property name="url" type="text">
+            <column name="url"/>
+        </property>
+        <property name="price" type="float">
+            <column name="price"/>
+        </property>
+        <property name="website" type="text">
+            <column name="website"/>
+        </property>
+    </class>
+</hibernate-mapping>

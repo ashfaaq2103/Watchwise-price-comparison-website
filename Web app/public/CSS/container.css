@@ -1,0 +1,111 @@
+/* Setting the default font family for the entire page */
+body {
+    font-family: 'lato', sans-serif;
+}
+
+/* Styling for the main table container */
+.container_table {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+/* Styling for h2 headings with nested small elements */
+h2 {
+    font-size: 26px;
+    margin: 20px 0;
+    text-align: center;
+
+    /* Styling for nested small elements within h2 */
+    small {
+        font-size: 0.5em;
+    }
+}
+
+/* Styling for the responsive table */
+.responsive-table {
+    li {
+        border-radius: 3px;
+        padding: 25px 30px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 25px;
+    }
+
+    /* Styling for the table header */
+    .table-header {
+        background-color: #95A5A6;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+    }
+
+    /* Styling for each table row */
+    .table-row {
+        background-color: #ffffff;
+        box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Styling for table columns (flex-basis) */
+    .col-1 {
+        flex-basis: 25%;
+    }
+    .col-2 {
+        flex-basis: 50%;
+    }
+    .col-3 {
+        flex-basis: 25%;
+    }
+
+    /* Media query for responsiveness on smaller screens */
+    @media all and (max-width: 767px) {
+        .table-header {
+            display: none;
+        }
+
+        li {
+            display: block;
+        }
+
+        .col {
+            flex-basis: 100%;
+            display: flex;
+            padding: 10px 0;
+
+            /* Styling for column labels in smaller screens */
+            &:before {
+                color: #6C7A89;
+                padding-right: 10px;
+                content: attr(data-label);
+                flex-basis: 50%;
+                text-align: right;
+            }
+        }
+    }
+}
+
+/* Styling for link buttons within the table */
+.link-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #545540;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for link buttons */
+.link-button:hover {
+    background-color: #f8b3b3;
+    color: black;
+}
+
+/* Additional styling for the 'price' class */
+.price {
+    padding-left: 150px;
+}

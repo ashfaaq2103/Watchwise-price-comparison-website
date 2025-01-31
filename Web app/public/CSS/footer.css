@@ -1,0 +1,51 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* sets attributes for footer, sets its position, color and border */
+footer {
+  position: relative;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #b1b1b1;
+  background-color: #545540;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* sets position and color */
+.copyright {
+  color: rgb(253, 253, 247);
+}
+
+/*Sets font characteristics*/
+.copyright p {
+  font-size: 14px;
+  word-spacing: 0;
+  text-transform: capitalize;
+  margin-top: 30px;
+}
+
+.middle_text {
+  padding-bottom: 30px;
+}
+
+/* remove bullet points, display all on the same line */
+.socials {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+footer li {
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+/* positions elements  */
+.social_logo {
+  margin-top: 40px;
+}

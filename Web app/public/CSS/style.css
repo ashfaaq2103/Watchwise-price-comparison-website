@@ -1,0 +1,312 @@
+*
+{
+  scroll-behavior: smooth;
+}
+
+/* sets position on screen of the container to be placed */
+.container1 {
+  position: relative;
+  margin-right: 10%;
+  margin-left: 12%;
+  padding-top: 200px;
+  padding-bottom: 50px;
+}
+
+.container1css {
+  border: 2px solid #545540;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.watch_image {
+  width: 350px;
+  margin-right: 10px;
+  animation: watch_image_ 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes watch_image_ {
+  0% {
+    opacity: 0.5;
+  }
+  25% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.about {
+  width: 90%;
+  text-align: center;
+  color: #422e12;
+  font-size: 18px;
+  padding-top: 5%;
+  padding-left: 4%;
+  padding-bottom: 40px;
+}
+
+.search {
+  /* width: 100%; */
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #545540;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9dbfaf;
+}
+
+.searchTerm:focus {
+  color: #545540;
+}
+
+.searchButton {
+  width: 40px;
+  height: 35px;
+  border: 3px solid #545540;
+  background: #8e906c;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.wrap {
+  width: 70%;
+  padding-left: 13%;
+}
+
+/* sets position on screen of the container to be placed
+Center the items in the container */
+.collection_container {
+  align-items: center;
+  padding-top: 80px;
+  padding-bottom: 100px;
+  background-image: linear-gradient(180deg, #ffffff, #d8d8d8fa 50%, #b6b6b6fa);
+}
+
+/* styles the h1, adds color and position */
+.collection_container h1 {
+  text-align: center;
+  color: #545540;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 60px;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 25px;
+  padding-top: 40px;
+}
+
+.grid-container .items {
+  border-radius: 50px;
+  background-color: #545540;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  padding-top: 60px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 30px;
+  max-width: 400px;
+  min-width: 400px;
+  max-height: 600px;
+  min-height: 150px;
+  box-shadow: 10px 10px 5px rgba(78, 76, 76, 0.241); /*Sets shadow around box*/
+}
+
+.brand_format
+{
+  font-family: "Times New Roman";
+  padding-bottom: 3%;
+}
+
+.grid-container .items:hover {
+  background-color: #717255;
+  color: black;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.43); /*Sets shadow around box*/
+}
+
+.grid-container p {
+  padding-top: 30px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.grid-container button {
+  border-radius: 5px;
+  border: 1px solid gray;
+  box-shadow: 10px 10px 5px rgba(78, 76, 76, 0.241); /*Sets shadow around box*/
+  font-size: 20px;
+  background-color: rgb(164, 158, 158);
+  width: 40%;
+  height: 10%;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  transition: 1s ease-in-out;
+}
+
+.items_image
+{
+  max-width: 250px;
+}
+
+
+.grid-container button:hover {
+  background-color: #000000;
+  color:white;
+}
+
+/* positionning container, setting color, border and space */
+.sort_container {
+  padding: 80px;
+  align-items: center;
+  margin-left: 29%;
+  margin-right: 24%;
+  color: #545540;
+  border-bottom: 0.1rem dotted grey;
+  padding-bottom: 10px;
+}
+
+/* font characteristics */
+.sort_container p {
+  font-family: Canela, Times, serif;
+  font-size: 18px;
+}
+
+/* sets color */
+.items a button
+{
+  color:white;
+}
+
+
+/* positions header text in container */
+.sort_container h2 {
+  margin-left: 34%;
+  margin-bottom: 4%;
+  margin-top: 2%;
+
+}
+
+/* sets position where data should be displayed, sets color */
+.cartContainer {
+  float: left;
+  background-color: #4e3e55;
+  color: white;
+  border: none;
+  box-shadow: none;
+  font-size: 17px;
+  font-weight: 500;
+  font-weight: 600;
+  border-radius: 3px;
+  padding: 15px 35px;
+  margin: 26px 5px 0 5px;
+  cursor: pointer;
+}
+
+/* sets color */
+.items a button
+{
+  color:white;
+}
+
+.compare_img
+{
+  max-width: 350px;
+
+
+}
+
+.comparison_page
+{
+  display: flex;
+  padding-top: 130px;
+  padding-bottom: 50px;
+  border-bottom: 0.1rem dotted grey;
+}
+
+.brand_Descri
+{
+  justify-content: center;
+  justify-items: center;
+  padding-left: 150px;
+}
+
+.brand_comp
+{
+  font-size: 35px;
+  text-align: center;
+  font-weight: 700;
+  padding-top: 100px;
+  padding-bottom: 30px;
+  color: #545540;
+}
+
+.descri_comp
+{
+  font-size: 20px;
+  text-align: center;
+  color: #545540;
+  max-width: 600px;
+}
+
+.watchContainers
+{
+  text-align: center;
+  font-size: 30px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.pagination
+{
+  text-align: center;
+  padding-top: 4%;
+  padding-bottom: 4%;
+}
+
+.pagination_button
+{
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100px;
+  height: 40px;
+  font-size: 18px;
+  background-color: #717255;
+  color: white;
+  transition: 0.5s ease-in-out;
+
+}
+
+.pagination_button:hover
+{
+  color: black;
+  background-color: #ebf1da;
+}
+
+.pagination_numbers
+{
+  font-size: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+
+}

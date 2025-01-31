@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <!-- Set the title of the page -->
+        <title>Home page</title>
+        <!-- Character set and viewport for responsive design -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Include necessary libraries and scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.5.0/dist/sweetalert2.min.js"></script>
+        <!-- Vue.js library -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <!-- Axios library for making HTTP requests -->
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+        <!-- Include custom stylesheets and scripts -->
+        <link rel="stylesheet" type="text/css" href="./CSS/header.css" />
+        <link rel="stylesheet" type="text/css" href="./CSS/footer.css" />
+        <link rel="stylesheet" type="text/css" href="./CSS/style.css" />
+        <script src="./js/common.js"></script>
+    </head>
+
+    <body>
+    <!-- Header section -->
+    <header id="top-header">
+        <nav>
+            <!-- Search box with a search icon as a button -->
+            <input class="input_text" type="text" placeholder="Search..." id="search_btn" name="search">
+            <button class="input_btn" type="submit" onclick="clicked()">
+                <i>
+                    <img src="./Assets/search.png" alt="search">
+                </i>
+            </button>
+
+            <!-- Navigation links -->
+            <a href="./index.html">HOME</a>
+
+            <!-- Logo -->
+            <img class="header_img" src="./Assets/logo.png" alt="logo-header">
+            <div class="right_side"></div>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <div class="sort_container">
+        <h2>WATCHES</h2>
+        <p>
+            <!-- Introduction about watches -->
+            In the intricate tapestry of time, a watch emerges as a miniature masterpiece,
+            embodying elegance in its every detail. A dance of precision, it captures fleeting moments with grace and sophistication.
+            Poised on the wrist, it transcends utility to become a timeless expression of style—a silent storyteller of both
+            punctuality and refinement. Choose yours wisely.
+        </p>
+    </div>
+
+    <!-- Watch container with Vue.js integration -->
+    <div id="watchContainer"></div>
+    <div id="app">
+        <div class="grid-container">
+            <!-- Loop through watches and display relevant information -->
+            <div v-for="watch in watch" class="items">
+                <img class="items_image" :src="watch.image_url" alt="Watch Image">
+                <p class="brand_format">{{ watch.brand }}</p>
+                <h3>{{ watch.description }}</h3>
+                <!-- Button to compare watches -->
+                <a><button v-on:click="compare(watch.watch_id)">Compare</button></a>
+            </div>
+        </div>
+
+        <!-- Pagination section -->
+        <div id="pagination" class="pagination">
+            <!-- Previous page button -->
+            <button v-if="currentPage > 1" v-on:click="loadPage(currentPage - 1)" class="pagination_button">Previous</button>
+            <!-- Current page information -->
+            <span class="pagination_numbers">{{ currentPage }} of {{totalPages}}</span>
+            <!-- Next page button -->
+            <button v-if="currentPage < totalPages" v-on:click="loadPage(currentPage + 1)" class="pagination_button">Next</button>
+        </div>
+    </div>
+
+
+
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                watch: [],
+                currentPage: 1,
+                itemsPerPage: 29,
+                totalPages: 0
+            },
+            methods: {
+                compare: function (watchId) {
+                    window.location.href = 'compare.html?watch_id=' + watchId;
+                },
+                loadPage: function (page) {
+                    this.currentPage = page;
+                    this.loadWatches();
+                },
+                loadWatches: function () {
+                    var localApp = this;
+                    var offset = (localApp.currentPage - 1) * localApp.itemsPerPage;
+
+                    axios.get(`/watch?num_items=${localApp.itemsPerPage}&offset=${offset}`)
+                        .then(function (response) {
+                            localApp.watch = response.data.data;
+                            localApp.totalPages = Math.ceil(response.data.totNumItems / localApp.itemsPerPage);
+                        })
+                        .catch(function (error) {
+                            console.error(error);
+                        });
+                }
+            },
+            created: function () {
+                this.loadWatches();
+            }
+        });
+    </script>
+
+    <!-- Footer section -->
+    <footer>
+        <div class="copyright" id="socials">
+            <ul>
+                <!-- Social media links -->
+                <div class="social_logo">
+                    <h3 class="middle_text">Follow us</h3>
+                    <div class="socials">
+                        <li><a href="https://www.facebook.com" target="_blank"><img src="./Assets/facebook.png"></a></li>
+                        <li><a href="https://twitter.com" target="_blank"><img src="./Assets/twitter.png"></a></li>
+                        <li><a href="https://www.instagram.com" target="_blank"><img src="./Assets/instagram.png"></a></li>
+                    </div>
+                </div>
+            </ul>
+            <!-- Copyright information -->
+            <p class="paragraph">WATCHWISE Copyright 2023© All rights reserved</p>
+        </div>
+    </footer>
+    </body>
+
+</html>

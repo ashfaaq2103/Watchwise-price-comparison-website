@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- outputs specific title of page echo  -->
+    <title>Home page</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.5.0/dist/sweetalert2.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./CSS/header.css" />
+    <link rel="stylesheet" type="text/css" href="./CSS/footer.css" />
+    <link rel="stylesheet" type="text/css" href="./CSS/style.css" />
+    <link rel="stylesheet" type="text/css" href="./CSS/container.css" />
+    <script src="./js/compare.js"></script>
+    <script src="./js/common.js"></script>
+
+</head>
+
+<header id="top-header">
+    <nav>
+        <!-- adding a searchbox with a search icon as button  -->
+        <input class="input_text" type="text" placeholder="Search..." id="search_btn" name="search">
+        <button class="input_btn" type="submit" onclick="clicked()">
+            <i>
+                <img src="./Assets/search.png" alt="search">
+            </i>
+        </button>
+
+        <a href="./index.html">HOME</a>
+
+        <!-- displays logo in middle of page  -->
+        <!-- displays text and image which serves as button to go to cart page  -->
+
+        <img class="header_img" src="./Assets/logo.png" alt="logo-header">
+        <div class="right_side">
+            <a href="./products.html">VIEW ALL WATCHES</a>
+        </div>
+    </nav>
+</header>
+<body>
+    <div class="comparison_page">
+        <img class="compare_img" src="" alt="Watch Image">
+        <div class="brand_Descri">
+            <p class="brand_comp">
+
+            </p>
+            <p class="descri_comp">
+
+            </p>
+        </div>
+    </div>
+
+    <div class="container_table">
+        <ul class="responsive-table">
+            <li class="table-header">
+                <div class="col col-1">Website Name</div>
+                <div class="col col-2">Price($)</div>
+                <div class="col col-4"></div>
+            </li>
+            <li class="table-row">
+                <div class="col col-1" data-label="Job Id"></div>
+                <div class="col col-2" data-label="Customer Name"></div>
+                <div class="col col-3" data-label="URL">
+                    <a href="https://example.com" target="_blank" class="link-button"></a>
+                </div>
+
+            </li>
+
+        </ul>
+    </div>
+
+</body>
+
+<footer>
+    <!-- displaying logo which when pressed, opens new page with link url  -->
+    <div class="copyright" id="socials">
+        <ul>
+            <div class="social_logo">
+                <h3 class="middle_text">Follow us</h3>
+                <div class="socials">
+                    <li><a href="https://www.facebook.com" target="_blank"><img src="./Assets/facebook.png"></a> </li>
+                    <li><a href="https://twitter.com" target="_blank"><img src="./Assets/twitter.png"></a> </li>
+                    <li><a href="https://www.instagram.com" target="_blank"><img src="./Assets/instagram.png"></a> </li>
+                </div>
+            </div>
+        </ul>
+        <p class="paragraph">WATCHWISE Copyright 2023© All rights reserved</p>
+    </div>
+</footer>
+</html>
